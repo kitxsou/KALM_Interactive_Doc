@@ -3,17 +3,19 @@ import { setCurrentScreen } from "../../main.js";
 import { Choice } from "../model/Choice.js";
 import { iHaveToGoButton, restartButton } from "../sharedChoices.js";
 import { screen11 } from "./screen11.js";
+import { screen2 } from "./screen2.js";
+import { screen3 } from "./screen3.js";
 
-const choiceYesButton = new Choice(400, 200, 100, 100, "Rettungsgasse bilden", () =>
-  setCurrentScreen(screen11)
+const choiceYesButton = new Choice(200, 200, 100, 100, "Rettungsgasse bilden", () =>
+  setCurrentScreen(screen3)
 );
 
-const choiceNoButton = new Choice(600, 200, 100, 100, "nicht bilden", () =>
-  setCurrentScreen(screen11)
+const choiceNoButton = new Choice(400, 200, 100, 100, "nicht bilden", () =>
+  setCurrentScreen(screen11) // Trailer Bad End
 );
 
-const choiceWhoButton = new Choice(200, 200, 100, 100, "Ich will erst mal wissen wer du bist.", () =>
-  setCurrentScreen(screen11)
+const choiceWhoButton = new Choice(600, 200, 100, 100, "Ich will erst mal wissen wer du bist.", () =>
+  setCurrentScreen(screen2)
 );
 
 function show() {
