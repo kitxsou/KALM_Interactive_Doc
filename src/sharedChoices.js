@@ -4,7 +4,7 @@ import { screen11 } from "./screens/screen11.js";
 import { startScreen } from "./screens/startScreen.js";
 
 // returns to startscreen
-export const restartButton = new Choice(300, 300, 100, 100, "neu starten", () =>
+export const restartButton = new Choice(300, 700, 100, 100, "neu starten", () =>
   setCurrentScreen(startScreen)
 );
 
