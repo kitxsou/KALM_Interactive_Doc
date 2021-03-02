@@ -12,10 +12,11 @@ export class Choice {
 
   show() {
     textSize(20);
-    fill(100, 100, 100);
+    noStroke();
+    fill("#FD6F57");
     rect(this.x, this.y, this.width, this.height);
     fill(255);
-    text(this.text, this.x, this.y + this.height / 2);
+    text(this.text, this.x + this.width / 4, this.y + this.height / 2);
   }
 
   mouseClicked() {
