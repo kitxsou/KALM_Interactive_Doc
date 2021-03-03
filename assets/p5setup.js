@@ -21,7 +21,3 @@ function preload(){
 window.preload = preload;
 
 
-function setup (){
-    windowWidth = windowWidth;
-    windowHeight = windowHeight;
-}
