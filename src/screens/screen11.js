@@ -4,15 +4,12 @@ import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButt
 function show() {
   clear();
   image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
-  text(
-    "Alles klar! Bleib Kalm und fahr vorsichtig. Der Einsatzwagen wird gleich an dir vorbei fahren.",
-    500,
-    500
-  );
-
+ 
   if(window.innerWidth <= 1024) {
+    text("Alles klar! Bleib Kalm und fahr vorsichtig. Der Einsatzwagen wird gleich an dir vorbei fahren.", windowWidth / 2, windowHeight / 2);
    restartButtonSmall.show();
   } else if (window.innerWidth > 1024) {
+    text("Alles klar! Bleib Kalm und fahr vorsichtig. Der Einsatzwagen wird gleich an dir vorbei fahren.", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
     restartButtonBig.show();
   }
 }
