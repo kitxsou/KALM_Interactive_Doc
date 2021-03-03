@@ -67,7 +67,7 @@ function getCircleSpread(x, y, npoints, noiseVal, noiseMin, noiseMax, speed) {
   for (let a = 0; a < TWO_PI; a += angle) {
     let offX = map(cos(a), -1, 1, 0, noiseVal);
     let offY = map(sin(a + phase), -1, 1, 0, noiseVal);
-    r = map(noise(offX, offY, sin(phase / 2)), 0, 1, noiseMin, noiseMax);
+    let r = map(noise(offX, offY, sin(phase / 2)), 0, 1, noiseMin, noiseMax);
     let sx = x + cos(a) * r;
     let sy = y + sin(a) * r;
     let e = [sx, sy, offX, offY];
@@ -125,16 +125,15 @@ function polygon(
 
 function gradientColor(x1, y1, x2, y2, color1, color2, alpha) {
   // linear gradient from start to end of line
-  var grad = this.drawingContext.createLinearGradient(x1, y1, x2, y2);
+  let grad = drawingContext.createLinearGradient(x1, y1, x2, y2);
   color1.setAlpha(alpha);
   color2.setAlpha(alpha);
 
   grad.addColorStop(0, color1);
   grad.addColorStop(1, color2);
 
-  this.drawingContext.fillStyle = grad;
+  drawingContext.fillStyle = grad;
 }
-
 
 export function polygons(x, y, scale, color1, color2, alpha, speed) {
   push();
@@ -178,8 +177,4 @@ export function polygons(x, y, scale, color1, color2, alpha, speed) {
     0.6 * PI,
     alpha
   );
-}
-
-modules.export {
-  polygons
 }
