@@ -14,6 +14,7 @@ setCurrentScreen(screen11)
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text("Wenn du dich im Auto befindest, handelst du automatisch anonymer. Grund ist die eingeschränkte Kommunikation zwischen dir und anderen Verkehrsteilnehmenden. Ich bilde das Sprachrohr für dich und die Einsatzkräfte!", 500, 500);
   choiceA.show();
   choiceB.show();

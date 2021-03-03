@@ -13,8 +13,7 @@ const choiceA = new Choice(400, 200, 100, 100, "weiter", () =>
 
 function show() {
   clear();
-  image(rettungsgasse, 10, 10);
-  text("Rettungsgassenbild", 500, 500);
+  image(rettungsgasse, 10, 10,windowWidth, windowWidth * 0.5625);
   choiceA.show();
  
   

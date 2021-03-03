@@ -10,6 +10,7 @@ const choiceA = new Choice(400, 200, 100, 100, "Verstehe, danke für die Info", 
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text("Ich berstehe aus zwei Modulen: eins im Einsatzwagen, eins in deinem Auto, die beide über Funk kommunizieren. Sobald ein Einsatzwagen in deinem Umkreis ist, warne ich dich frühzeitig.", 500, 500);
   choiceA.show();
 }

@@ -14,6 +14,7 @@ setCurrentScreen(screen4)
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text("Weißt du, wie man eine Rettungsgasse bildet?", 500, 500);
   choiceA.show();
   choiceB.show();

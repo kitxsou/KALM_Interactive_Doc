@@ -16,6 +16,7 @@ setCurrentScreen(screen11)
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text("Normalerweise würde ich dich jetzt fragen, ob du jemanden anrufen oder einen Termin verschieben willst. Da ich aber nur ein Test bin, lasse ich das \n Kann ich dir sonst noch weiterhelfen?", 500, 500);
   choiceA.show();
   choiceB.show();

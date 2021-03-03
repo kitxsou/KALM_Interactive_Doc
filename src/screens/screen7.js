@@ -16,6 +16,7 @@ setCurrentScreen(screen9)
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text("Ich bin Kalm und mein Ziel ist es, dir dabei zu helfen, auf eine entspannte und stressfreie Art eine Rettungsgasse zu bilden. So helfen wir dir und den Sanitätern dabei, ungehindert an euer Ziel zu gelangen, sodass keine Menschenleben gefährdet werden.", 500, 500);
   choiceA.show();
   choiceB.show();

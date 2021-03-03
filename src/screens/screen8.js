@@ -19,6 +19,7 @@ setCurrentScreen(screen11)
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text("Ja das kann sein, allerdings zeigt eine Umfrage des DRK, dass in 80% eine Rettungsgasse nicht oder zu spät gebildet wird. Dabei gehen wertvolle Minuten verloren, die die Retter dringend brauchen. (Umfrage verlinken)", 500, 500);
   choiceA.show();
   choiceB.show();

@@ -14,6 +14,7 @@ setCurrentScreen(screen4) // Trailer Bad End
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text("Dir ist schon klar, dass du gerade Leben gefährdest? \n Willst du nicht erst eine Rettungsgasse bilden?", 500, 500);
   choiceA.show();
   choiceB.show();

@@ -3,6 +3,7 @@ import { restartButton } from "../sharedChoices.js";
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text(
     "Alles klar! Bleib Kalm und fahr vorsichtig. Der Einsatzwagen wird gleich an dir vorbei fahren.",
     500,

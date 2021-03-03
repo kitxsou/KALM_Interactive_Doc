@@ -20,6 +20,7 @@ const choiceWhoButton = new Choice(600, 200, 100, 100, "Ich will erst mal wissen
 
 function show() {
   clear();
+  image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   text("Ich bin Kalm und übernehme ab jetzt. \nBitte helfe, indem du eine Rettungsgasse bildest.", 500, 500);
   restartButton.show();
   choiceYesButton.show();
