@@ -10,12 +10,17 @@ export class Choice {
     this.onMouseClicked = onMouseClicked;
   }
 
+
   show() {
-    textSize(20);
+    if(window.innerWidth <= 1024) {
+      textSize(15);
+    } else {
+       textSize(20);
+    }
     noStroke();
     fill("#FD6F57");
     rectMode(CENTER);
-    rect(windowWidth / 2 + this.x, windowHeight / 2 + this.y, this.width, this.height);
+    rect(windowWidth / 2 + this.x, windowHeight / 2 + this.y, this.width, this.height, 20);
     fill(255);
     textAlign(CENTER, CENTER);
     text(this.text, windowWidth / 2 + this.x, windowHeight / 2 + this.y, this.width, this.height);
