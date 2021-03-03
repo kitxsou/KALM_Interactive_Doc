@@ -3,11 +3,11 @@ import { Choice } from "../model/Choice.js";
 import { Screen } from "../model/Screen.js";
 import { peterScreen } from "./peterScreen.js";
 
-const choiceA = new Choice(400, 200, 100, 100, "weiter", () =>
+const choiceA = new Choice(-100, 0, 100, 100, "weiter", () =>
   setCurrentScreen(peterScreen)
 );
 
-const choiceB = new Choice(200, 200, 100, 100, "blabla", () =>
+const choiceB = new Choice(100, 0, 100, 100, "blabla", () =>
   alert("nur ein Test")
 );
 

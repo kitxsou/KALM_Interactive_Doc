@@ -14,17 +14,19 @@ export class Choice {
     textSize(20);
     noStroke();
     fill("#FD6F57");
-    rect(this.x, this.y, this.width, this.height);
+    rectMode(CENTER);
+    rect(windowWidth / 2 + this.x, windowHeight / 2 + this.y, this.width, this.height);
     fill(255);
-    text(this.text, this.x + this.width / 4, this.y + this.height / 2);
+    textAlign(CENTER, CENTER);
+    text(this.text, windowWidth / 2 + this.x, windowHeight / 2 + this.y, this.width, this.height);
   }
 
   mouseClicked() {
     if (
-      this.x < mouseX &&
-      mouseX < this.x + this.width &&
-      this.y < mouseY &&
-      mouseY < this.y + this.height
+      mouseX >= windowWidth / 2 + this.x - this.width / 2 && 
+      mouseX <= windowWidth / 2 + this.x + this.width / 2 && 
+      mouseY >= windowHeight / 2 + this.y - this.height / 2 && 
+      mouseY <= windowHeight / 2 + this.y + this.height / 2
     ) {
       this.onMouseClicked();
     }
