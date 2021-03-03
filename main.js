@@ -5,16 +5,18 @@ let currentScreen = screen6;
 
 export function setCurrentScreen(newScreen) {
   currentScreen = newScreen;
+  newScreenSound.play();
 }
 
 window.setup = () => {
   createCanvas(windowWidth, windowHeight);
   frameRate(30);
+  getAudioContext().resume().catch(console.error);
 };
 
-window.windowResized =() => {
+window.windowResized = () => {
   resizeCanvas(windowWidth, windowHeight);
-}
+};
 
 window.draw = () => {
   currentScreen.show();
@@ -23,4 +25,3 @@ window.draw = () => {
 window.mouseClicked = function () {
   currentScreen.mouseClicked();
 };
-

@@ -3,21 +3,25 @@ let rettungsgasse;
 let kalmempty;
 //let startscreen;
 
- let traileranfang;
+let traileranfang;
 // let badend;
 // let trailer;
 
-function preload(){
-    petersanitaeter = loadImage("./assets/images/kalm_petersanitaeter.png");
-    rettungsgasse = loadImage("./assets/images/kalm_rettungsgasse.png");
-    kalmempty = loadImage("./assets/images/kalm_leer.png");
-    //startscreen = loadImage("./assets/images/kalm_startscreen.png");
+let clickSound;
+let newScreenSound;
 
-    // traileranfang = createVideo( './assets/videos/Anfang.mp4');
-    // badend = loadImage("png/laboratory.png");
-    // trailer = loadImage("png/laboratory.png");
+function preload() {
+  petersanitaeter = loadImage("./assets/images/kalm_petersanitaeter.png");
+  rettungsgasse = loadImage("./assets/images/kalm_rettungsgasse.png");
+  kalmempty = loadImage("./assets/images/kalm_leer.png");
+  //startscreen = loadImage("./assets/images/kalm_startscreen.png");
+
+  // traileranfang = createVideo( './assets/videos/Anfang.mp4');
+  // badend = loadImage("png/laboratory.png");
+  // trailer = loadImage("png/laboratory.png");
+
+  clickSound = new Audio("./assets/sounds/click.mp3");
+  newScreenSound = loadSound("./assets/sounds/newScreen.mp3");
 }
 
 window.preload = preload;
-
-
