@@ -21,7 +21,7 @@ function preload() {
   // trailer = loadImage("png/laboratory.png");
 
   clickSound = new Audio("./assets/sounds/click.mp3");
-  newScreenSound = loadSound("./assets/sounds/newScreen.mp3");
+  newScreenSound = new Audio("./assets/sounds/newScreen.mp3");
 }
 
 window.preload = preload;
