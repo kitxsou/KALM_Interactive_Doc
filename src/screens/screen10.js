@@ -3,6 +3,7 @@ import { Choice } from "../model/Choice.js";
 import { Screen } from "../model/Screen.js";
 import {screen9} from "./screen9.js"
 import {screen11} from "./screen11.js"
+import { polygons } from "../../assets/wabern.js";
 import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
 
 
@@ -43,16 +44,19 @@ function show() {
   clear();
   image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   
+  choiceYesButton.show();
+  choiceNoButton.show();
+
   if(window.innerWidth <= 1024) {
     restartButtonSmall.show();
     text("Wenn du dich im Auto befindest, handelst du automatisch anonymer. \nGrund ist die eingeschränkte Kommunikation zwischen dir und anderen Verkehrsteilnehmenden. \n Ich bilde das Sprachrohr für dich und die Einsatzkräfte!", windowWidth / 2, windowHeight / 2);
+    polygons(0, -180, 1.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
    } else if (window.innerWidth > 1024) {
      restartButtonBig.show();
       text("Wenn du dich im Auto befindest, handelst du automatisch anonymer. \nGrund ist die eingeschränkte Kommunikation zwischen dir und anderen Verkehrsteilnehmenden. \n Ich bilde das Sprachrohr für dich und die Einsatzkräfte!", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
-   }
+      polygons(0, -150, 2.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
+  }
  
-   choiceYesButton.show();
-   choiceNoButton.show();
 }
 
 function mouseClicked() {
