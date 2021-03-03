@@ -4,6 +4,7 @@ import { Screen } from "../model/Screen.js";
 import { screen7 } from "./screen7.js";
 import { screen11 } from "./screen11.js";
 import { polygons } from "../../assets/wabern.js";
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
 
 let choiceWhoButton;
 let choiceHaveToGoButton;
@@ -62,6 +63,7 @@ function show() {
   choiceWhoButton.show();
   choiceHaveToGoButton.show();
   if (window.innerWidth <= 1024) {
+    restartButtonSmall.show();
     text(
       "Normalerweise würde ich dich jetzt fragen, ob du jemanden anrufen oder \neinen Termin verschieben willst. Da ich aber nur ein Test bin, lasse ich das. \n Kann ich dir sonst noch weiterhelfen?",
       windowWidth / 2,
@@ -69,6 +71,7 @@ function show() {
     );
     polygons(0, -180, 1.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   } else if (window.innerWidth > 1024) {
+    restartButtonBig.show();
     text(
       "Normalerweise würde ich dich jetzt fragen, ob du jemanden anrufen oder \neinen Termin verschieben willst. Da ich aber nur ein Test bin, lasse ich das. \n Kann ich dir sonst noch weiterhelfen?",
       windowWidth / 2,
@@ -82,6 +85,13 @@ function show() {
 }
 
 function mouseClicked() {
+
+  if(window.innerWidth <= 1024) {
+    restartButtonSmall.mouseClicked();
+  } else if (window.innerWidth > 1024) {
+      restartButtonBig.mouseClicked();
+  }
+
   choiceWhoButton.mouseClicked();
   choiceHaveToGoButton.mouseClicked();
 }

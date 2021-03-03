@@ -30,10 +30,10 @@ function show() {
 }
 
 function mouseClicked() {
-    if(window.innerWidth <= 1024) {
-   restartButtonSmall.mouseClicked();
+  if(window.innerWidth <= 1024) {
+    restartButtonSmall.mouseClicked();
   } else if (window.innerWidth > 1024) {
-    restartButtonBig.mouseClicked();
+      restartButtonBig.mouseClicked();
   }
 
   goOnButton.mouseClicked();

@@ -4,11 +4,11 @@ import { screen11 } from "./screens/screen11.js";
 import { startScreen } from "./screens/startScreen.js";
 
 // returns to startscreen
- export const restartButtonSmall = new Choice(window.innerWidth / 2.6, window.innerHeight / 4.5, 80, 40, "Neu starten", () =>
+ export const restartButtonSmall = new Choice(-window.innerWidth / 2.8, window.innerHeight / 4.5, 120, 40, "Neu starten", () =>
    setCurrentScreen(startScreen)
  );
 
-   export const restartButtonBig = new Choice(window.innerWidth / 2.6, window.innerHeight / 2.2, 100, 60, "Neu starten", () =>
+   export const restartButtonBig = new Choice(-window.innerWidth / 2.68, window.innerHeight / 2.2, 150, 60, "Neu starten", () =>
    setCurrentScreen(startScreen)
   );
 

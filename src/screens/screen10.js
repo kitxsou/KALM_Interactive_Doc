@@ -3,6 +3,7 @@ import { Choice } from "../model/Choice.js";
 import { Screen } from "../model/Screen.js";
 import {screen9} from "./screen9.js"
 import {screen11} from "./screen11.js"
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
 
 
 let choiceYesButton;
@@ -43,8 +44,10 @@ function show() {
   image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
   
   if(window.innerWidth <= 1024) {
+    restartButtonSmall.show();
     text("Wenn du dich im Auto befindest, handelst du automatisch anonymer. \nGrund ist die eingeschränkte Kommunikation zwischen dir und anderen Verkehrsteilnehmenden. \n Ich bilde das Sprachrohr für dich und die Einsatzkräfte!", windowWidth / 2, windowHeight / 2);
    } else if (window.innerWidth > 1024) {
+     restartButtonBig.show();
       text("Wenn du dich im Auto befindest, handelst du automatisch anonymer. \nGrund ist die eingeschränkte Kommunikation zwischen dir und anderen Verkehrsteilnehmenden. \n Ich bilde das Sprachrohr für dich und die Einsatzkräfte!", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
    }
  
@@ -53,6 +56,13 @@ function show() {
 }
 
 function mouseClicked() {
+
+  if(window.innerWidth <= 1024) {
+    restartButtonSmall.mouseClicked();
+  } else if (window.innerWidth > 1024) {
+      restartButtonBig.mouseClicked();
+  }
+
   choiceYesButton.mouseClicked();
   choiceNoButton.mouseClicked();
 }

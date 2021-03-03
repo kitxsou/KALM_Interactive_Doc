@@ -3,6 +3,7 @@ import { Choice } from "../model/Choice.js";
 import { Screen } from "../model/Screen.js";
 import {screen6} from "./screen6.js"
 import { polygons } from "../../assets/wabern.js";
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
 
 let goOnButton;
 
@@ -23,15 +24,24 @@ function show() {
   goOnButton.show();
 
    if(window.innerWidth <= 1024) {
+    restartButtonSmall.show();
     text("Danke! Du bist ein Lebensretter :*", windowWidth / 2, windowHeight / 2);
     polygons(0, -180, 1.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   } else if (window.innerWidth > 1024) {
+    restartButtonBig.show();
     text("Danke! Du bist ein Lebensretter :*", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
     polygons(0, -150, 2.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   }
 }
 
 function mouseClicked() {
+
+  if(window.innerWidth <= 1024) {
+    restartButtonSmall.mouseClicked();
+  } else if (window.innerWidth > 1024) {
+      restartButtonBig.mouseClicked();
+  }
+
   goOnButton.mouseClicked();
 }
 

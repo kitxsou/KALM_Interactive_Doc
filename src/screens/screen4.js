@@ -2,6 +2,7 @@ import { setCurrentScreen } from "../../main.js";
 import { Choice } from "../model/Choice.js";
 import { Screen } from "../model/Screen.js";
 import {screen5} from "./screen5.js"
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
 
 let goOnButton;
 
@@ -18,12 +19,24 @@ if(window.innerWidth <= 1024) {
 function show() {
   clear();
   image(rettungsgasse, 10, 10,windowWidth, windowWidth * 0.5625);
- goOnButton.show();
+
+  goOnButton.show();
  
-  
+  if(window.innerWidth <= 1024) {
+   restartButtonSmall.show();
+  } else if (window.innerWidth > 1024) {
+    restartButtonBig.show();
+  }
 }
 
 function mouseClicked() {
+
+  if(window.innerWidth <= 1024) {
+    restartButtonSmall.mouseClicked();
+  } else if (window.innerWidth > 1024) {
+      restartButtonBig.mouseClicked();
+  }
+
   goOnButton.mouseClicked();
   
 }

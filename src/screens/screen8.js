@@ -5,6 +5,7 @@ import {screen9} from "./screen9.js"
 import {screen10} from "./screen10.js"
 import {screen11} from "./screen11.js"
 import { polygons } from "../../assets/wabern.js";
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
 
 let choiceHowWorkButton;
 let choiceTellMoreButton;
@@ -55,6 +56,7 @@ function show() {
   choiceGoOnButton.show();
 
  if (window.innerWidth <= 1024) {
+    restartButtonSmall.show();
     text(
       "Ja das kann sein, allerdings zeigt eine Umfrage des DRK, dass in 80% eine Rettungsgasse \nnicht oder zu spät gebildet wird. Dabei gehen wertvolle Minuten verloren, die die Retter dringend brauchen.",
       windowWidth / 2,
@@ -62,6 +64,7 @@ function show() {
     );
     polygons(0, -180, 1.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   } else if (window.innerWidth > 1024) {
+    restartButtonBig.show();
     text(
       "Ja das kann sein, allerdings zeigt eine Umfrage des DRK, dass in 80% eine Rettungsgasse \nnicht oder zu spät gebildet wird. Dabei gehen wertvolle Minuten verloren, die die Retter dringend brauchen.",
       windowWidth / 2,
@@ -72,6 +75,13 @@ function show() {
 }
 
 function mouseClicked() {
+
+  if(window.innerWidth <= 1024) {
+    restartButtonSmall.mouseClicked();
+  } else if (window.innerWidth > 1024) {
+      restartButtonBig.mouseClicked();
+  }
+
   choiceHowWorkButton.mouseClicked();
   choiceTellMoreButton.mouseClicked();
   choiceGoOnButton.mouseClicked();

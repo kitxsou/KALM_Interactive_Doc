@@ -4,6 +4,8 @@ import { Screen } from "../model/Screen.js";
 import {screen4} from "./screen4.js"
 import {screen5} from "./screen5.js"
 import { polygons } from "../../assets/wabern.js";
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
+
 
 let choiceYesButton;
 let choiceNoButton;
@@ -46,15 +48,24 @@ function show() {
   choiceNoButton.show();
 
   if(window.innerWidth <= 1024) {
+    restartButtonSmall.show();
     text("Weißt du, wie man eine Rettungsgasse bildet?", windowWidth / 2, windowHeight / 2);
     polygons(0, -180, 1.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   } else if (window.innerWidth > 1024) {
+      restartButtonBig.show();
       text("Weißt du, wie man eine Rettungsgasse bildet?", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
       polygons(0, -150, 2.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   }
 }
 
 function mouseClicked() {
+
+  if(window.innerWidth <= 1024) {
+    restartButtonSmall.mouseClicked();
+  } else if (window.innerWidth > 1024) {
+      restartButtonBig.mouseClicked();
+  }
+
   choiceYesButton.mouseClicked();
   choiceNoButton.mouseClicked();
 }

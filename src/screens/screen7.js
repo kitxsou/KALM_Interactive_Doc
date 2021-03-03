@@ -4,7 +4,7 @@ import { Screen } from "../model/Screen.js";
 import {screen8} from "./screen8.js"
 import {screen9} from "./screen9.js"
 import { polygons } from "../../assets/wabern.js";
-
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
 
 let choiceDoubtButton;
 let choiceHowButton;
@@ -47,6 +47,7 @@ function show() {
   choiceHowButton.show();
 
  if (window.innerWidth <= 1024) {
+    restartButtonSmall.show();
     text(
       "Ich bin Kalm und mein Ziel ist es, dir dabei zu helfen, auf eine entspannte \nund stressfreie Art eine Rettungsgasse zu bilden. So helfen wir dir und den Sanitätern dabei, \nungehindert an euer Ziel zu gelangen, sodass keine Menschenleben gefährdet werden.",
       windowWidth / 2,
@@ -54,6 +55,7 @@ function show() {
     );
     polygons(0, -180, 1.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   } else if (window.innerWidth > 1024) {
+    restartButtonBig.show();
     text(
       "Ich bin Kalm und mein Ziel ist es, dir dabei zu helfen, auf eine entspannte \nund stressfreie Art eine Rettungsgasse zu bilden. So helfen wir dir und den Sanitätern dabei, \nungehindert an euer Ziel zu gelangen, sodass keine Menschenleben gefährdet werden.",
       windowWidth / 2,
@@ -66,6 +68,13 @@ function show() {
 }
 
 function mouseClicked() {
+
+  if(window.innerWidth <= 1024) {
+    restartButtonSmall.mouseClicked();
+  } else if (window.innerWidth > 1024) {
+      restartButtonBig.mouseClicked();
+  }
+
   choiceDoubtButton.mouseClicked();
   choiceHowButton.mouseClicked();
  
