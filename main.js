@@ -1,7 +1,7 @@
 import { startScreen } from "./src/screens/startScreen.js";
 import { peterScreen } from "./src/screens/peterScreen.js";
-import { screen2 } from "./src/screens/screen2.js";
-let currentScreen = screen2;
+import { screen6 } from "./src/screens/screen6.js";
+let currentScreen = screen6;
 
 export function setCurrentScreen(newScreen) {
   currentScreen = newScreen;

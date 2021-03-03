@@ -1,7 +1,7 @@
 import { Screen } from "../model/Screen.js";
 import { setCurrentScreen } from "../../main.js";
 import { Choice } from "../model/Choice.js";
-import { iHaveToGoButton, restartButton } from "../sharedChoices.js";
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall } from "../sharedChoices.js";
 import { screen11 } from "./screen11.js";
 import { screen2 } from "./screen2.js";
 import { screen3 } from "./screen3.js";
@@ -52,11 +52,12 @@ function show() {
 
   if(window.innerWidth <= 1024) {
    text("Ich bin Kalm und übernehme ab jetzt. \nBitte helfe, indem du eine Rettungsgasse bildest.", windowWidth / 2, windowHeight / 2);
+   restartButtonSmall.show();
   } else if (window.innerWidth > 1024) {
-     text("Ich bin Kalm und übernehme ab jetzt. \nBitte helfe, indem du eine Rettungsgasse bildest.", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
+    text("Ich bin Kalm und übernehme ab jetzt. \nBitte helfe, indem du eine Rettungsgasse bildest.", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
+    restartButtonBig.show();
   }
 
-  restartButton.show();
   choiceYesButton.show();
   choiceNoButton.show();
   choiceWhoButton.show();

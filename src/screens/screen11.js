@@ -1,5 +1,5 @@
 import { Screen } from "../model/Screen.js";
-import { restartButton } from "../sharedChoices.js";
+import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall } from "../sharedChoices.js";
 
 function show() {
   clear();
@@ -10,11 +10,19 @@ function show() {
     500
   );
 
-  restartButton.show();
+  if(window.innerWidth <= 1024) {
+   restartButtonSmall.show();
+  } else if (window.innerWidth > 1024) {
+    restartButtonBig.show();
+  }
 }
 
 function mouseClicked() {
-  restartButton.mouseClicked();
+  if(window.innerWidth <= 1024) {
+   restartButtonSmall.mouseClicked();
+  } else if (window.innerWidth > 1024) {
+    restartButtonBig.mouseClicked();
+  }
 }
 
 export const screen11 = new Screen(show, mouseClicked);

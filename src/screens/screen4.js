@@ -4,23 +4,28 @@ import { Screen } from "../model/Screen.js";
 import {screen5} from "./screen5.js"
 
 
+let goOnButton;
 
-const choiceA = new Choice(400, 200, 100, 100, "weiter", () =>
-  setCurrentScreen(screen5)
-);
-
-
+if(window.innerWidth <= 1024) {
+  goOnButton = new Choice(window.innerWidth / 2.6, window.innerHeight / 4.5, 80, 40, "weiter", () =>
+   setCurrentScreen(screen5)
+  );
+} else if (window.innerWidth > 1024) {
+   goOnButton = new Choice(window.innerWidth / 2.6, window.innerHeight / 2.2, 100, 60, "weiter", () =>
+   setCurrentScreen(screen5)
+  );
+}
 
 function show() {
   clear();
   image(rettungsgasse, 10, 10,windowWidth, windowWidth * 0.5625);
-  choiceA.show();
+ goOnButton.show();
  
   
 }
 
 function mouseClicked() {
-  choiceA.mouseClicked();
+  goOnButton.mouseClicked();
   
 }
 
