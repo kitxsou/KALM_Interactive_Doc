@@ -3,7 +3,6 @@ import { Choice } from "../model/Choice.js";
 import { Screen } from "../model/Screen.js";
 import {screen5} from "./screen5.js"
 
-
 let goOnButton;
 
 if(window.innerWidth <= 1024) {

@@ -2,6 +2,7 @@ import { setCurrentScreen } from "../../main.js";
 import { Choice } from "../model/Choice.js";
 import { Screen } from "../model/Screen.js";
 import {screen6} from "./screen6.js"
+import { polygons } from "../../assets/wabern.js";
 
 let goOnButton;
 
@@ -18,12 +19,16 @@ if(window.innerWidth <= 1024) {
 function show() {
   clear();
   image(kalmempty, 0,0,windowWidth, windowWidth * 0.5625);
+
+  goOnButton.show();
+
    if(window.innerWidth <= 1024) {
-   text("Danke! Du bist ein Lebensretter :*", windowWidth / 2, windowHeight / 2);
+    text("Danke! Du bist ein Lebensretter :*", windowWidth / 2, windowHeight / 2);
+    polygons(0, -180, 1.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   } else if (window.innerWidth > 1024) {
     text("Danke! Du bist ein Lebensretter :*", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
+    polygons(0, -150, 2.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
   }
-  goOnButton.show();
 }
 
 function mouseClicked() {
