@@ -10,6 +10,7 @@ const goOnButton = new Choice(400, 200, 100, 100, "weiter", () =>
 
 function show() {
   clear();
+  image(petersanitaeter, 0,0,windowWidth, windowWidth * 0.5625);
   text("Hallo ich bin Peter und ich muss gleich an dir vorbei.", 500, 500);
   restartButton.show();
   goOnButton.show();

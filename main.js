@@ -1,6 +1,6 @@
 import { startScreen } from "./src/screens/startScreen.js";
 import { peterScreen } from "./src/screens/peterScreen.js";
-
+import { kalmScreen } from "./src/screens/kalmScreen.js";
 let currentScreen = startScreen;
 
 export function setCurrentScreen(newScreen) {
@@ -12,6 +12,10 @@ window.setup = () => {
   frameRate(30);
 };
 
+window.windowResized =() => {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 window.draw = () => {
   currentScreen.show();
 };
@@ -19,3 +23,4 @@ window.draw = () => {
 window.mouseClicked = function () {
   currentScreen.mouseClicked();
 };
+
