@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KALM Interactive Doc</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="body" class="no-overflow">
+    <!-- GAME -->
+    <div id="game" class="game">
+      <p class="gameText">HIER KOMMT DAS GAME REIN</p>
+      <button id="goodEndBtn" class="gameButton" onclick="endGame('good')">
+        good end
+      </button>
+      <button id="badEndBtn" class="gameButton" onclick="endGame('bad')">
+        bad end
+      </button>
+    </div>
+    <div class="website">
+      <header>header</header>
+      <main>
+        <!-- video bad ending -->
+        <div id="badEndVideo" class="video-container hidden">
+          <iframe
+            class="video"
+            src="https://player.vimeo.com/video/518106062"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- video good ending -->
+        <div id="goodEndVideo" class="video-container">
+          <iframe
+            src="https://player.vimeo.com/video/513626811"
+            class="video"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="info-area">
+          <p class="grid-text-1">hier können ganz viele Infos rein!!!</p>
+          <div class="grid-button">
+            <button id="tryAgainBtn" class="gameButton" onclick="restartGame()">
+              nochmal
+            </button>
+          </div>
+          <p class="grid-text-2">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+      </main>
+      <footer>
+        <p class="footer-element">footer</p>
+        <a class="footer-element" href="#">Impressum</a>
+        <a class="footer-element" href="#">Doku</a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
