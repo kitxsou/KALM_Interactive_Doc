@@ -5,6 +5,7 @@ import {screen3} from "./screen3.js"
 import {screen4} from "./screen4.js"
 import { polygons } from "../../assets/wabern.js";
 import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
+import { badEnd } from "./badEnd.js";
 
 let choiceYesButton;
 let choiceNoButton;
@@ -24,7 +25,7 @@ if(window.innerWidth <= 1024) {
   );
 
   choiceNoButton = new Choice(window.innerWidth / 5, yButtonSmall, buttonWidthSmall, buttonHeightSmall, "Ne, beim nächsten \nmal vielleicht.", () =>
-    setCurrentScreen(screen4) // Trailer Bad End
+    setCurrentScreen(badEnd) // Trailer Bad End
   );
 
 
@@ -34,7 +35,7 @@ if(window.innerWidth <= 1024) {
     );
 
     choiceNoButton = new Choice(window.innerWidth / 6, yButtonBig, buttonWidthBig, buttonHeightBig, "Ne, beim nächsten mal vielleicht.", () =>
-      setCurrentScreen(screen4) // Trailer Bad End
+      setCurrentScreen(badEnd) // Trailer Bad End
     );
 }
 

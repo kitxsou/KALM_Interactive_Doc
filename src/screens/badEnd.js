@@ -3,16 +3,17 @@ import { setCurrentScreen } from "../../main.js";
 import { iHaveToGoButtonBig, iHaveToGoButtonSmall, restartButtonBig, restartButtonSmall} from "../sharedChoices.js";
 import { Choice } from "../model/Choice.js";
 import { endScreen2 } from "./endScreen2.js";
+import { endScreen1 } from "./endScreen1.js";
 
 let goOnButton;
 
 if(window.innerWidth <= 1024) {
   goOnButton = new Choice(window.innerWidth / 2.6, window.innerHeight / 4.5, 80, 40, "weiter", () =>
-   setCurrentScreen(endScreen2)
+   setCurrentScreen(endScreen1)
   );
 } else if (window.innerWidth > 1024) {
    goOnButton = new Choice(window.innerWidth / 2.6, window.innerHeight / 2.2, 100, 60, "weiter", () =>
-   setCurrentScreen(endScreen2)
+   setCurrentScreen(endScreen1)
   );
 }
 
