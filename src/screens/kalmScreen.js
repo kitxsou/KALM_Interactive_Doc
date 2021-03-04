@@ -6,6 +6,7 @@ import { screen11 } from "./screen11.js";
 import { screen2 } from "./screen2.js";
 import { screen3 } from "./screen3.js";
 import { polygons } from "../../assets/wabern.js";
+import { badEnd } from "./badEnd.js";
 
 let choiceYesButton;
 let choiceNoButton;
@@ -26,7 +27,7 @@ if(window.innerWidth <= 1024) {
   );
 
   choiceNoButton = new Choice(0, yButtonSmall, buttonWidthSmall, buttonHeightSmall, "nicht bilden", () =>
-  setCurrentScreen(screen11) // Trailer Bad End
+  setCurrentScreen(badEnd) // Trailer Bad End
   );
 
   choiceWhoButton = new Choice(window.innerWidth / 4, yButtonSmall, buttonWidthSmall, buttonHeightSmall, "Ich will erst mal \nwissen wer du bist.", () =>
@@ -39,7 +40,7 @@ if(window.innerWidth <= 1024) {
     );
 
     choiceNoButton = new Choice(0, yButtonBig, buttonWidthBig, buttonHeightBig, "nicht bilden", () =>
-    setCurrentScreen(screen11) // Trailer Bad End
+    setCurrentScreen(badEnd) // Trailer Bad End
     );
 
     choiceWhoButton = new Choice(window.innerWidth / 4, yButtonBig, buttonWidthBig, buttonHeightBig, "Ich will erst mal wissen wer du bist.", () =>

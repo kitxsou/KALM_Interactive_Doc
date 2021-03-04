@@ -5,9 +5,11 @@ import { hiScreen } from "./src/screens/hiScreen.js";
 import { screen2 } from "./src/screens/screen2.js";
 import { peterScreen } from "./src/screens/peterScreen.js";
 import { endScreen1 } from "./src/screens/endScreen1.js";
+import { goodEnd } from "./src/screens/goodEnd.js";
+import { badEnd } from "./src/screens/badEnd.js";
 
 //let currentScreen = startScreen;
-let currentScreen = endScreen1;
+let currentScreen = hiScreen;
 
 export function setCurrentScreen(newScreen) {
   currentScreen = newScreen;
