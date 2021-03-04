@@ -1,7 +1,12 @@
 let petersanitaeter;
 let rettungsgasse;
 let kalmempty;
-//let startscreen;
+let willkommen;
+let konzept;
+let technik;
+let end;
+
+
 
 //let traileranfang;
 // let badEnd;
@@ -17,6 +22,9 @@ function preload() {
   rettungsgasse = loadImage("./assets/images/kalm_rettungsgasse.png");
   kalmempty = loadImage("./assets/images/kalm_leer.png");
   willkommen = loadImage("./assets/images/HiScreen.png");
+  konzept = loadImage("./assets/images/goodbyeScreen1.png");
+  technik = loadImage("./assets/images/goodbyeScreen2.png");
+  end = loadImage("./assets/images/goodbyeScreen3.png");
  
 
 
