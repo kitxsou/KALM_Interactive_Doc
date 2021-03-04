@@ -3,7 +3,6 @@ import { Choice } from "../model/Choice.js";
 import { Screen } from "../model/Screen.js";
 import { peterScreen } from "./peterScreen.js";
 
-import { startScreen } from "./startScreen.js";
 
 
 let goOnButton;
