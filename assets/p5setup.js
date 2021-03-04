@@ -7,6 +7,8 @@ let kalmempty;
 // let badEnd;
 // let goodEnd;
 
+let myFont;
+
 let clickSound;
 let newScreenSound;
 
@@ -14,7 +16,12 @@ function preload() {
   petersanitaeter = loadImage("./assets/images/kalm_petersanitaeter.png");
   rettungsgasse = loadImage("./assets/images/kalm_rettungsgasse.png");
   kalmempty = loadImage("./assets/images/kalm_leer.png");
-  //startscreen = loadImage("./assets/images/kalm_startscreen.png");
+  willkommen = loadImage("./assets/images/HiScreen.png");
+ 
+
+
+  //print("https://use.typekit.net/dsk0uwt.css");
+
 
   //traileranfang = createVideo( './assets/videos/Anfang.mp4');
   // badEnd = createVideo( './assets/videos/Bad Trailer.mp4');

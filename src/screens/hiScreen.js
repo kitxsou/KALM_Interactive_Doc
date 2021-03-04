@@ -21,14 +21,9 @@ if(window.innerWidth <= 1024) {
 
 function show() {
   clear();
+  
+  image(willkommen, 0,0,windowWidth, windowWidth * 0.5625);
   goOnButton.show();
-  textSize(50);
-  //textAlign(CENTER,CENTER);
-  text("Start", window.innerWidth / 2, window.innerHeight / 5);
-  textSize(16);
-  text("Text", window.innerWidth / 2, window.innerHeight / 2);
-
- 
 }
 
 function mouseClicked() {

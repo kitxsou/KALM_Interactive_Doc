@@ -47,12 +47,12 @@ function show() {
   
   if(window.innerWidth <= 1024) {
     restartButtonSmall.show();
-    text("Ich berstehe aus zwei Modulen: eins im Einsatzwagen, eins in deinem Auto, die beide über Funk kommunizieren.\n  Sobald ein Einsatzwagen in deinem Umkreis ist, warne ich dich frühzeitig.", windowWidth / 2, windowHeight / 2);
+    text("Ich bestehe aus zwei Modulen: eins im Einsatzwagen, eins in deinem Auto, die beide über Funk kommunizieren.\n  Sobald ein Einsatzwagen in deinem Umkreis ist, warne ich dich frühzeitig.", windowWidth / 2, windowHeight / 2);
     choiceHaveToGoButton.show();
     polygons(0, -180, 1.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
    } else if (window.innerWidth > 1024) {
       restartButtonBig.show();
-     text("Ich berstehe aus zwei Modulen: eins im Einsatzwagen, eins in deinem Auto, die beide über Funk kommunizieren.\n Sobald ein Einsatzwagen in deinem Umkreis ist, warne ich dich frühzeitig.", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
+     text("Ich bestehe aus zwei Modulen: eins im Einsatzwagen, eins in deinem Auto, die beide über Funk kommunizieren.\n Sobald ein Einsatzwagen in deinem Umkreis ist, warne ich dich frühzeitig.", windowWidth / 2, windowHeight / 2 + windowHeight / 8);
      choiceHaveToGoButton.show();
      polygons(0, -150, 2.4, color(253, 112, 87), color(82, 70, 248), 160, 0.01);
    }
