@@ -8,7 +8,7 @@ let end;
 
 
 
-//let traileranfang;
+let traileranfang;
 // let badEnd;
 // let goodEnd;
 
@@ -30,7 +30,7 @@ function preload() {
 
   //print("https://use.typekit.net/dsk0uwt.css");
 
-
+  //traileranfang = loadVideo("./assets/videos/Anfang.mp4");
   //traileranfang = createVideo( './assets/videos/Anfang.mp4');
   // badEnd = createVideo( './assets/videos/Bad Trailer.mp4');
   // goodEnd = createVideo( './assets/videos/Trailer.mp4');

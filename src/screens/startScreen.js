@@ -20,6 +20,7 @@ function OnEndVideo(){
 }
 
 function show() {
+
   // clear();
   // goOnButton.show();
   clear();
