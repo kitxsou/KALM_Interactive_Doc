@@ -1,8 +1,10 @@
 import { startScreen } from "./src/screens/startScreen.js";
 import { kalmScreen } from "./src/screens/kalmScreen.js";
 import { screen5 } from "./src/screens/screen5.js";
+import { hiScreen } from "./src/screens/hiScreen.js";
 
-let currentScreen = startScreen;
+//let currentScreen = startScreen;
+let currentScreen = hiScreen;
 
 export function setCurrentScreen(newScreen) {
   currentScreen = newScreen;

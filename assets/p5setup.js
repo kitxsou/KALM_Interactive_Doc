@@ -3,7 +3,7 @@ let rettungsgasse;
 let kalmempty;
 //let startscreen;
 
-let traileranfang;
+//let traileranfang;
 // let badEnd;
 // let goodEnd;
 
@@ -16,7 +16,7 @@ function preload() {
   kalmempty = loadImage("./assets/images/kalm_leer.png");
   //startscreen = loadImage("./assets/images/kalm_startscreen.png");
 
-  traileranfang = createVideo( './assets/videos/Anfang.mp4');
+  //traileranfang = createVideo( './assets/videos/Anfang.mp4');
   // badEnd = createVideo( './assets/videos/Bad Trailer.mp4');
   // goodEnd = createVideo( './assets/videos/Trailer.mp4');
 
