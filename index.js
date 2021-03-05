@@ -5,6 +5,7 @@ let beginVideo = document.getElementById("beginVideo");
 function playBeginVideo() {
   beginVideo.play();
   change("startGameBtn", "hidden", "hidden");
+  change("startOverlay", "hidden", "hidden");
 }
 
 function startGame() {
