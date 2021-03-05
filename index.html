@@ -58,15 +58,15 @@
             </button>
           </div>
           <p class="grid-text-2">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Über das Konzept <br/><br/>
+            Kalm ist eine Anwndung, die dir dabei helfen soll, auf eine entspannte und stressfreie Art eine Rettungsgasse zu bilden. So helfen wir dir und den Sanitätern dabei, ungehindert an euer Ziel zu gelangen, sodass keine Menschenleben gefährdet werden. Der momentane Interaktionsprozess ist leider fehlerhaft, eine Umfrage des DRK zeigt, dass in 80% eine Rettungsgasse nicht oder zu spät gebildet wird. Dabei gehen wertvolle Minuten verloren, die die Retter dringend brauchen.
+            Einer der Gründe dafür ist, dass man automatisch anonymer handelt, sobald man sich im Auto befindet und dann weniger Empathie für Andere zeigen kann und leichter aggressiv reagiert. Schuld ist die eingeschränkte Kommunikation zwischen dir und anderen Verkehrsteilnehmenden. KALM bildet also das Sprachrohr für dich und die Einsatzkräfte!
+            <br/><br/>
+            Die Technik hinter KALM <br/><br/>
+            KALM besteht aus zwei Modulen: eines im Einsatzwagen, und jeweils eines in dem Auto, die beide über Funk kommunizieren. Sobald ein Einsatzwagen in dem Umkreis eines Autos ist, warnt KALM frühzeitig.
+            Nachdem die Leitstelle einen Notfall erhalten hat, informiert sie Einsatzwagenfahrende, die sich in der Nähe befinden. Parallel dazu werden Daten an die Firma Rescuetrack gesendet, die dem Einsatzwagen eine entsprechende Route zukommen lassen. Sobald die Einsatzwagenfahrenden die Route erhalten, aktiviert sich, zusammen mit dem Blaulicht, unser System, sodass keine Zeit
+            verloren geht. Der Sender im Einsatzwagen besteht aus einem RPi, der mit einem GPS Modul + Keramikantenne und einem 2.4gHz Funkmodul ausgestattet ist. Außerdem ist der Pi noch mit einer Status LED sowie einem Knopf verkabelt.
+            Sobald das System aktiviert ist, werden Teile der Route und eine Einsatzid als JSON per Funk gesendet. Autos im Umkreis der Funkverbindung empfangen das JSON. Die Daten werden ebenfalls von einem RPi über ein GPS Modul + Keramikantenne mit dem eigenen Standort abgeglichen. Wenn die Autos sich zwischen zwei Routenpunkten befinden, werden sie über verschiedene Mittel gewarnt, die je nach Ausstattung des Fahrzeugs variieren. Für den Prototypen verwenden wir ein 7“ LCD Touch Display als Mittelkonsole, ein Funkmodul sowie einen Vibrationsmotor, eine LED, welche die Ambient Lights der Autos simulieren soll und einen Schalter für das Lenkrad.
           </p>
         </div>
       </main>

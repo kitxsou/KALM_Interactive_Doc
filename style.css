@@ -73,17 +73,23 @@ body {
 .video-container {
   width: auto;
   height: 40vw;
-  background-color: rgb(255, 0, 0);
+  background-color: #0d1440;
 }
 
 header {
   height: 100px;
-  background-color: rgb(255, 0, 255);
+  background-color: #0d1440;
 }
-
+#logo {
+  padding: 50px;
+  width: 50%;
+  object-fit: cover;
+  height: 100px; 
+	background: url(assets/images/Logo.png) no-repeat;
+}
 footer {
   height: 100px;
-  background-color: rgb(255, 0, 255);
+  background-color: #FD6F57;
   display: flex;
   flex-direction: row;
   align-items: center;
