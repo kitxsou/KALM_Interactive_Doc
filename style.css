@@ -77,11 +77,12 @@ header {
   background-color: #0d1440;
 }
 #logo {
-  padding: 50px;
-  width: 50%;
+  padding-top: 25px;
+  padding-left: 25px;
+  width: 100%;
   object-fit: cover;
-  height: 100px;
-  background: url(assets/images/Logo.png) no-repeat;
+  height: 100px; 
+  background-color: #0d1440;
 }
 footer {
   height: 100px;
@@ -99,6 +100,7 @@ footer {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
+  background-color: #0d1440;
 }
 
 .gameButton {
