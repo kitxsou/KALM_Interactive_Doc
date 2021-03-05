@@ -81,11 +81,11 @@ header {
   background-color: #0d1440;
 }
 #logo {
-  padding: 50px;
+  padding-top: 25px;
+  padding-left: 25px;
   width: 50%;
   object-fit: cover;
   height: 100px; 
-	background: url(assets/images/Logo.png) no-repeat;
 }
 footer {
   height: 100px;
