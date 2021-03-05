@@ -81,7 +81,7 @@ header {
   padding-left: 25px;
   width: 100%;
   object-fit: cover;
-  height: 100px; 
+  height: 100px;
   background-color: #0d1440;
 }
 footer {
@@ -111,7 +111,7 @@ footer {
   position: absolute;
   padding: 30px;
   padding-top: 12px;
-  margin-top: 930px;
+  margin-top: 1070px;
   top: 55%;
   bottom: 30%;
   left: 5%;
@@ -144,7 +144,7 @@ footer {
     font-size: 120%;
     padding: 40px;
     padding-top: 18px;
-    margin-top: 1950px;
+    margin-top: 2070px;
     top: 55%;
     bottom: 30%;
     left: 5%;
