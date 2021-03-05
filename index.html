@@ -1,22 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KALM Interactive Doc</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/dsk0uwt.css"> -->
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <script src="assets/p5.js"></script>
-    <script src="assets/p5.sound.js"></script>
-    <script src="assets/p5setup.js"></script>
-    <script type="module" src="main.js"></script>
-</body>
+  <body id="body" class="no-overflow">
+    <!-- GAME -->
+    <div id="game" class="game">
+      <button id="startGameBtn" class="startGameButton" onclick="playBeginVideo()">
+        starten
+      </button>
+      <video
+      id="beginVideo"
+      class="gameStartVideo"
+      >
+          <source alt="video of the kalm intro" src="/assets/videos/Anfang.mp4" type="video/mp4" />
+    </div>
 
+    <div class="website">
+      <header>header</header>
+      <main>
+        <!-- video bad ending -->
+        <div id="badEndVideo" class="video-container hidden">
+          <iframe
+            class="video"
+            src="https://player.vimeo.com/video/518106062"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- video good ending -->
+        <div id="goodEndVideo" class="video-container">
+          <iframe
+            src="https://player.vimeo.com/video/513626811"
+            class="video"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="info-area">
+          <p class="grid-text-1">hier können ganz viele Infos rein!!!</p>
+          <div class="grid-button">
+            <button id="tryAgainBtn" class="gameButton" onclick="restartGame()">
+              nochmal
+            </button>
+          </div>
+          <p class="grid-text-2">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+      </main>
+      <footer>
+        <p class="footer-element">footer</p>
+        <a class="footer-element" href="#">Impressum</a>
+        <a class="footer-element" href="#">Doku</a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>

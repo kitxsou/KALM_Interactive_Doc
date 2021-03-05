@@ -9,11 +9,19 @@ import { goodEnd } from "./src/screens/goodEnd.js";
 import { badEnd } from "./src/screens/badEnd.js";
 
 //let currentScreen = startScreen;
-let currentScreen = hiScreen;
+let currentScreen = kalmScreen;
 
 export function setCurrentScreen(newScreen) {
-  currentScreen = newScreen;
-  newScreenSound.play();
+  if (newScreen === badEnd || newScreen === "badEnd") {
+    localStorage.setItem("end", "badEnd");
+    window.location.replace("index.html");
+  } else if (newScreen === goodEnd || newScreen === "goodEnd") {
+    localStorage.setItem("end", "goodEnd");
+    window.location.href = "index.html";
+  } else {
+    currentScreen = newScreen;
+    newScreenSound.play();
+  }
 }
 
 window.setup = () => {
