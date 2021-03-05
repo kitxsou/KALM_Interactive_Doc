@@ -17,6 +17,14 @@ export class Choice {
       textSize(20);
     }
     noStroke();
+    if (
+      mouseX >= windowWidth / 2 + this.x - this.width / 2 &&
+      mouseX <= windowWidth / 2 + this.x + this.width / 2 &&
+      mouseY >= windowHeight / 2 + this.y - this.height / 2 &&
+      mouseY <= windowHeight / 2 + this.y + this.height / 2
+    ) {
+      stroke(255);
+    }
     fill("#FD6F57");
     rectMode(CENTER);
     rect(
@@ -26,6 +34,7 @@ export class Choice {
       this.height,
       20
     );
+    noStroke();
     fill(255);
     textAlign(CENTER, CENTER);
     text(
